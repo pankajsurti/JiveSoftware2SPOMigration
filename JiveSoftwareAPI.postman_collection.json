@@ -1,0 +1,1227 @@
+{
+	"info": {
+		"_postman_id": "fa6158b6-4f79-414d-941b-06ce1cd2b211",
+		"name": "0-VA Pulse (UAT)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get place information by place id",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "YourPassWord",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "YourUserName",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{TokenType}} {{AccessToken}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json; odata=verbose",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://{{baseURL}}/api/core/v3/places/{{placeID}}",
+					"protocol": "https",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"core",
+						"v3",
+						"places",
+						"{{placeID}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Place Places",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "YourPassword",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "YourUserName",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{TokenType}} {{AccessToken}}"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json; odata=verbose"
+					}
+				],
+				"url": {
+					"raw": "https://{{baseURL}}/api/core/v3/places/{{placeID}}/places",
+					"protocol": "https",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"core",
+						"v3",
+						"places",
+						"{{placeID}}",
+						"places"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Entitlements by Place ID",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "YourPassword",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "YourUserName",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{TokenType}} {{AccessToken}}"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json; odata=verbose"
+					}
+				],
+				"url": {
+					"raw": "https://{{baseURL}}/api/core/v3/places/{{placeID}}/entitlements",
+					"protocol": "https",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"core",
+						"v3",
+						"places",
+						"{{placeID}}",
+						"entitlements"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Featured Content",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "YourPassword",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "YourUserName",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{TokenType}} {{AccessToken}}"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json; odata=verbose"
+					}
+				],
+				"url": {
+					"raw": "https://{{baseURL}}/api/core/v3/places/{{placeID}}/contents/featured",
+					"protocol": "https",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"core",
+						"v3",
+						"places",
+						"{{placeID}}",
+						"contents",
+						"featured"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Pages",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "YourPassword",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "YourUserName",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{TokenType}} {{AccessToken}}"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json; odata=verbose"
+					}
+				],
+				"url": {
+					"raw": "https://{{baseURL}}/api/core/v3/places/{{placeID}}/pages",
+					"protocol": "https",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"core",
+						"v3",
+						"places",
+						"{{placeID}}",
+						"pages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get extprops by Place ID",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "YourPassword",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "YourUserName",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{TokenType}} {{AccessToken}}"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json; odata=verbose"
+					}
+				],
+				"url": {
+					"raw": "https://{{baseURL}}/api/core/v3/places/{{placeID}}/extprops",
+					"protocol": "https",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"core",
+						"v3",
+						"places",
+						"{{placeID}}",
+						"extprops"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get announcements by Place ID",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "YourPassword",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "YourUserName",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{TokenType}} {{AccessToken}}"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json; odata=verbose"
+					}
+				],
+				"url": {
+					"raw": "https://{{baseURL}}/api/core/v3/places/{{placeID}}/announcements",
+					"protocol": "https",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"core",
+						"v3",
+						"places",
+						"{{placeID}}",
+						"announcements"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Avatar by Place ID",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "YourPassword",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "YourUserName",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{TokenType}} {{AccessToken}}"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json; odata=verbose"
+					}
+				],
+				"url": {
+					"raw": "https://{{baseURL}}/api/core/v3/places/{{placeID}}/avatar",
+					"protocol": "https",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"core",
+						"v3",
+						"places",
+						"{{placeID}}",
+						"avatar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get statics by Place ID",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "YourPassword",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "YourUserName",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{TokenType}} {{AccessToken}}"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json; odata=verbose"
+					}
+				],
+				"url": {
+					"raw": "https://{{baseURL}}/api/core/v3/places/{{placeID}}/statics",
+					"protocol": "https",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"core",
+						"v3",
+						"places",
+						"{{placeID}}",
+						"statics"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get followers by Place ID",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "YourPassword",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "YourUserName",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{TokenType}} {{AccessToken}}"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json; odata=verbose"
+					}
+				],
+				"url": {
+					"raw": "https://{{baseURL}}/api/core/v3/places/{{placeID}}/followers",
+					"protocol": "https",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"core",
+						"v3",
+						"places",
+						"{{placeID}}",
+						"followers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get followingIn by Place ID",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "YourPassword",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "YourUserName",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{TokenType}} {{AccessToken}}"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json; odata=verbose"
+					}
+				],
+				"url": {
+					"raw": "https://{{baseURL}}/api/core/v3/places/{{placeID}}/followingIn",
+					"protocol": "https",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"core",
+						"v3",
+						"places",
+						"{{placeID}}",
+						"followingIn"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get activity by Place ID",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "YourPassword",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "YourUserName",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{TokenType}} {{AccessToken}}"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json; odata=verbose"
+					}
+				],
+				"url": {
+					"raw": "https://{{baseURL}}/api/core/v3/places/{{placeID}}/activities",
+					"protocol": "https",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"core",
+						"v3",
+						"places",
+						"{{placeID}}",
+						"activities"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get pages by Place ID",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "YourPassword",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "YourUserName",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{TokenType}} {{AccessToken}}"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json; odata=verbose"
+					}
+				],
+				"url": {
+					"raw": "https://{{baseURL}}/api/core/v3/places/{{placeID}}/pages",
+					"protocol": "https",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"core",
+						"v3",
+						"places",
+						"{{placeID}}",
+						"pages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Members by Place ID",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "YourPassword",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "YourUserName",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{TokenType}} {{AccessToken}}"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json; odata=verbose"
+					}
+				],
+				"url": {
+					"raw": "https://{{baseURL}}/api/core/v3/members/places/{{placeID}}",
+					"protocol": "https",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"core",
+						"v3",
+						"members",
+						"places",
+						"{{placeID}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Contents by Place ID",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "YourPassword",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "YourUserName",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://{{baseURL}}/api/core/v3/places/{{placeID}}/contents",
+					"protocol": "https",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"core",
+						"v3",
+						"places",
+						"{{placeID}}",
+						"contents"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Categories by Place ID",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "YourPassword",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "YourUserName",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://{{baseURL}}/api/core/v3/places/{{placeID}}/categories",
+					"protocol": "https",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"core",
+						"v3",
+						"places",
+						"{{placeID}}",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Place Permissions",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "YourPassword",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "YourUserName",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://{{baseURL}}/api/core/v3/places/{{placeID}}/permissions",
+					"protocol": "https",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"core",
+						"v3",
+						"places",
+						"{{placeID}}",
+						"permissions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Place Settings",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "YourPassword",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "YourUserName",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://{{baseURL}}/api/core/v3/places/{{placeID}}/settings",
+					"protocol": "https",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"core",
+						"v3",
+						"places",
+						"{{placeID}}",
+						"settings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Place Tasks",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "YourPassword",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "YourUserName",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://{{baseURL}}/api/core/v3/places/{{placeID}}/tasks",
+					"protocol": "https",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"core",
+						"v3",
+						"places",
+						"{{placeID}}",
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Places",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "YourPassword",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "YourUserName",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://{{baseURL}}/api/core/v3/places?filter=type(group)",
+					"protocol": "https",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"core",
+						"v3",
+						"places"
+					],
+					"query": [
+						{
+							"key": "filter",
+							"value": "type(group)"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Recommended Places",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "YourPassword",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "YourUserName",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://{{baseURL}}/api/core/v3/places/recommended",
+					"protocol": "https",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"core",
+						"v3",
+						"places",
+						"recommended"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Root Space",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "YourPassword",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "YourUserName",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://{{baseURL}}/api/core/v3/places/root",
+					"protocol": "https",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"core",
+						"v3",
+						"places",
+						"root"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Suggested Places",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "YourPassword",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "YourUserName",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://{{baseURL}}/api/core/v3/places/suggested/project",
+					"protocol": "https",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"core",
+						"v3",
+						"places",
+						"suggested",
+						"project"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /search/places",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "YourPassword",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "YourUserName",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://{{baseURL}}/api/core/v3/search/places?filter=search('*')&fields=placeID,type,displayName,name,description&filter=type(blog)&count=100&startIndex=1",
+					"protocol": "https",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"core",
+						"v3",
+						"search",
+						"places"
+					],
+					"query": [
+						{
+							"key": "filter",
+							"value": "search('*')"
+						},
+						{
+							"key": "fields",
+							"value": "placeID,type,displayName,name,description"
+						},
+						{
+							"key": "filter",
+							"value": "type(blog)"
+						},
+						{
+							"key": "count",
+							"value": "100"
+						},
+						{
+							"key": "startIndex",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /search/contents",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "YourPassword",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "YourUserName",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://{{baseURL}}/api/core/v3/search/contents?filter=search(*)",
+					"protocol": "https",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"core",
+						"v3",
+						"search",
+						"contents"
+					],
+					"query": [
+						{
+							"key": "filter",
+							"value": "search(*)"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /search/people",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "YourPassword",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "YourUserName",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://{{baseURL}}/api/core/v3/search/people?filter=search(*)",
+					"protocol": "https",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"core",
+						"v3",
+						"search",
+						"people"
+					],
+					"query": [
+						{
+							"key": "filter",
+							"value": "search(*)"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /search/tags",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "YourPassword",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "YourUserName",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://{{baseURL}}/api/core/v3/search/tags?filter=search(*)",
+					"protocol": "https",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"core",
+						"v3",
+						"search",
+						"tags"
+					],
+					"query": [
+						{
+							"key": "filter",
+							"value": "search(*)"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
